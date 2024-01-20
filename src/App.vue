@@ -1,9 +1,13 @@
 <template>
     <div class="container">
-        <button v-on:click="count++" class="button is-primary mt-3">Click me! Count: {{ count }}</button>
+        <div class="content mt-3">
+            <input class="input" v-bind:value="message" v-on:input="message=$event.target.value">
+            <input class="input" v-model="message">
+            <h1>{{ message }}</h1>
+        </div>
     </div>
 </template>
 <script setup>
 import {ref} from 'vue';
-let count = ref(0);
+let message = ref('Hello vue!');
 </script>
