@@ -4,7 +4,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
 //   mode: 'production',
-  entry: './src/index.js',
+  entry: './src/index.ts',
   output: {
     filename: 'main.js',
     path: path.resolve(__dirname, 'dist'),
@@ -17,6 +17,16 @@ module.exports = {
     compress: true,
     port: 9000,
   },
+  resolve: {
+    // Add `.ts` and `.tsx` as a resolvable extension.
+    extensions: [".ts", ".tsx", ".js"],
+    // Add support for TypeScripts fully qualified ESM imports.
+    extensionAlias: {
+     ".js": [".js", ".ts"],
+     ".cjs": [".cjs", ".cts"],
+     ".mjs": [".mjs", ".mts"]
+    }
+  },
   module: {
     rules: [
       {
@@ -26,7 +36,8 @@ module.exports = {
       {
         test: /\.s[ac]ss$/i,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
-      }
+      },
+      { test: /\.([cm]?ts|tsx)$/, loader: "ts-loader" }
     ],
   },
   plugins: [
