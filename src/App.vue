@@ -1,9 +1,8 @@
 <template>
     <div class="container">
         <div class="content mt-3">
-            <input class="input" v-bind:value="message" v-on:input="message=$event.target.value">
             <input class="input" v-model="message">
-            <h1>{{ message }}</h1>
+            <h1>{{ message.split('').reverse().join('') }}</h1>
         </div>
     </div>
 </template>
