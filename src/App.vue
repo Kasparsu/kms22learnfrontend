@@ -12,32 +12,9 @@
                 </div>
             </div>
 
-            <h1>All Items</h1>
-            <ul>
-                <li v-for="item in items" :key="item.id">
-                    {{ item.name }}
-                    <input type="checkbox" v-model="item.isDone">
-                </li>
-            </ul>
-
-            <h1>Done Items</h1>
-            <ul>
-                <li v-for="item in doneItems" :key="item.id">
-                    {{ item.name }}
-                    <input type="checkbox" v-model="item.isDone">
-                </li>
-            </ul>
-
-            <h1>ToDo Items</h1>
-            <ul>
-                <li v-for="item in toDoItems" :key="item.id">
-                    {{ item.name }}
-                    <input type="checkbox" v-model="item.isDone">
-                </li>
-            </ul>
-
-            <ItemList></ItemList>
-            <item-list></item-list>
+            <ItemList :items="items" title="All Items"></ItemList>
+            <ItemList :items="doneItems" title="Done Items"></ItemList>
+            <ItemList :items="toDoItems" title="ToDo Items"></ItemList>
         </div>
     </div>
 </template>
