@@ -9,6 +9,7 @@ import Modals from './pages/Modals.vue';
 import CanvasExample from './pages/CanvasExample.vue';
 import MapExample from './pages/MapExample.vue';
 import ChuckNorris from './pages/ChuckNorris.vue';
+import Weather from './pages/Weather.vue';
 const routes = [
     { path: '/', component: Home, name: 'Home' },
     { path: '/todo', component: ToDo, name: 'ToDo' },
@@ -16,6 +17,7 @@ const routes = [
     { path: '/canvas', component: CanvasExample, name: 'Canvas' },
     { path: '/map', component: MapExample, name: 'Map' },
     { path: '/chuck', component: ChuckNorris, name: 'Chuck' },
+    { path: '/weather', component: Weather, name: 'Weather' },
 ];
 
 const router = createRouter({
