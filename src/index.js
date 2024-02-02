@@ -11,6 +11,7 @@ import MapExample from './pages/MapExample.vue';
 import ChuckNorris from './pages/ChuckNorris.vue';
 import Weather from './pages/Weather.vue';
 import RickAndMorty from './pages/RickAndMorty.vue';
+import Slider from './pages/Slider.vue';
 const routes = [
     { path: '/', component: Home, name: 'Home' },
     { path: '/todo', component: ToDo, name: 'ToDo' },
@@ -20,6 +21,7 @@ const routes = [
     { path: '/chuck', component: ChuckNorris, name: 'Chuck' },
     { path: '/weather', component: Weather, name: 'Weather' },
     { path: '/rickandmorty', component: RickAndMorty, name: 'Rick And Morty' },
+    { path: '/slider', component: Slider, name: 'Slider' },
 ];
 
 const router = createRouter({
